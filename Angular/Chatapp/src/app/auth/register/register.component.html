@@ -1,0 +1,31 @@
+<body>
+  <main>
+    <section>
+      <form [formGroup]="RegisterForm" (ngSubmit)="Register()">
+        <h1>New here?</h1>
+        <p>Create an account to start having fun</p>
+
+        <mat-form-field [formGroup]="RegisterForm">
+          <input matInput placeholder="Enter you email" [formControl]="email" required>
+          <mat-error *ngIf="email.valid">Not a valid email</mat-error>
+        </mat-form-field>
+
+        <mat-form-field [formGroup]="RegisterForm">
+          <input matInput placeholder="Enter you password" [type]="hide ? 'password' : 'text'" [formControl]="password"
+            required>
+          <mat-icon matSuffix (click)="hide = !hide">{{ hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+          <mat-hint align="end">
+            <a routerLink="/reset-password">Forgot password?</a>
+          </mat-hint>
+          <mat-error *ngIf="password.valid">Not a valid password</mat-error>
+        </mat-form-field>
+        <mat-radio-group aria-label="Select your gender">
+            <mat-radio-button value="male">male</mat-radio-button>
+            <mat-radio-button value="female">female</mat-radio-button>
+        </mat-radio-group>
+        <button mat-raised-button type="submit">Register</button>
+      </form>
+    </section>
+  </main>
+</body>      
+    

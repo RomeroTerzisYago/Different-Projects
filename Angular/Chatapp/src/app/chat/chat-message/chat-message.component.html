@@ -1,0 +1,9 @@
+<mat-list>
+    <mat-list-item [ngClass]="{'inbound': incoming, 'outbound': !incoming}">
+        <p mat-line>{{message.sender}}</p>
+        <p mat-line>{{message.content}}</p>
+    <p mat-line>
+      <small>{{message.timestamp.toDate() | date: 'mediumDate'}}</small>
+    </p>
+  </mat-list-item>
+</mat-list>

@@ -1,0 +1,15 @@
+/*Angular Material theme und CSS für gesamnte App*/
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+:root{
+    --app-background-color:  rgb(188, 213, 229);
+    --app-primary-color: rgb(105, 72, 196);
+}
+body{
+    margin: 0;
+    width: 100%;
+    top: 0;
+    overflow: hidden;
+}
+.spacer{
+    flex: 1 1 auto;
+}
